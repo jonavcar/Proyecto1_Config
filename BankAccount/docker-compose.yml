@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  mongodb_BankAccount:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: Admin123.
+      MONGO_INITDB_DATABASE: BankAccount
+    ports:
+      - 27020:27020
+    volumes:
+      - mongodb_data_BankAccount:/data/db
+
+volumes:
+  mongodb_data_BankAccount:

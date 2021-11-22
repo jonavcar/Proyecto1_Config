@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  mongodb_AccountMovement:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: Admin123.
+      MONGO_INITDB_DATABASE: AccountMovement
+    ports:
+      - 27022:27022
+    volumes:
+      - mongodb_data_AccountMovement:/data/db
+
+volumes:
+  mongodb_data_AccountMovement:

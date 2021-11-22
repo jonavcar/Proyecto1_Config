@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  mongodb_BanckCredit:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: Admin123.
+      MONGO_INITDB_DATABASE: BanckCredit
+    ports:
+      - 27021:27021
+    volumes:
+      - mongodb_data_BanckCredit:/data/db
+
+volumes:
+  mongodb_data_BanckCredit:
